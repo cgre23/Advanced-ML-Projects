@@ -4,17 +4,18 @@
 ## for mouth detection download this:
 # https://raw.githubusercontent.com/peterbraden/node-opencv/master/data/haarcascade_mcs_mouth.xml
 
-
-# Paths to Cascade Classifiers
-face_casc_path = "/Users/csstnns/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml"
-eye_casc_path = "/Users/csstnns/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_eye.xml"
-nose_casc_path = "/Users/csstnns/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_mcs_nose.xml"
-
 #import required libraries
 from keras.models import load_model
 import cv2
 import sys
 import numpy as np
+
+# Paths to Cascade Classifiers
+face_casc_path = "/home/christiangrech/anaconda3/lib/python3.6/site-packages/cv2/data/haarcascade_frontalface_default.xml"
+eye_casc_path = "/home/christiangrech/anaconda3/lib/python3.6/site-packages/cv2/data/haarcascade_eye.xml"
+nose_casc_path = "/home/christiangrech/anaconda3/lib/python3.6/site-packages/cv2/data/haarcascade_mcs_nose.xml"
+
+
 #load the CNN model we saved
 model = load_model('face_rec.h5')
 #we know the label to name maps so let's use them
